@@ -2,32 +2,38 @@
 <html>
 <head>
   <title>Wellness Way</title>
+  <link rel="stylesheet" href="as.css">
 </head>
-<body>
-    <legend>  
+<body>  
     <div class="container">
     <div class="card">
       <div class="card-header"><b>Appointment Scheduling</b></div>
       <div class="card-body">
-        <form action="/register" method="post">
-          <input type="text" name="name" placeholder="Name">
-          <input type="email" name="email" placeholder="Email">
-          <input type="password" name="password" placeholder="Password">
-          <button type="submit" class="btn btn-primary">Register</button>
+        <form action="/schedule-appointment" method="post">
+          <legend>
+            <input type="text" name="name" placeholder="First Name">
+          <input type="text" name="name" placeholder="Last Name"></legend><br>
+          <input type="email" name="email" placeholder="Email"></legend><br>
+          <input type="number" name="number" placeholder="Mobile No">
         </form>
       </div>
     </div>
-    </legend>
 
 
     <div class="card mt-3">
-      <div class="card-header">Appointment Scheduling</div>
+      <div class="card-header"></div>
       <div class="card-body">
-        <form action="/schedule-appointment" method="post">
+        <form>
           <select name="healthcare_provider_id">
             <option value="">Select a healthcare provider</option>
-            <option value="1">Dr. Aditya</option>
-            <option value="2">Dr. Angar Gaurav</option>
+            <option value="1">Gynaecology</option>
+            <option value="2">Sexology</option>
+            <option value="3">Gender Physician</option>
+            <option value="4">Dermatology</option>
+            <option value="5">Psychiatry</option>
+            <option value="6">Stomach and Digestion</option>
+            <option value="7">Pediatrics</option>
+            <option value="8">Urology</option>
           </select>
           <input type="date" name="date" placeholder="Date">
           <input type="time" name="time" placeholder="Time">
