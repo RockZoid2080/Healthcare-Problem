@@ -52,14 +52,12 @@ header{
 .page1{
     background-color: rgb(222, 250, 215);
     height: 800px;
-    padding: 25px;
+    padding: 100px;
+    padding-left: 20%;
 }
 
 .headTxt{
     color: #359381;
-    padding: 10px;
-    text-align: center;
-    padding-left: 25px;
 }
 
 .page2{
@@ -68,4 +66,22 @@ header{
 
 input{
     width: 80%;
+    height: 50px;
+    border-radius: 25px;
+
+}
+
+select{
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+button{
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.container{
 }
