@@ -1,0 +1,26 @@
+.container{
+    background:#ff4d79;
+    width:auto;
+    height:auto;
+    border-radius:10px;
+    display:flex;
+    flex-direction:raw;
+    gap:10px;
+    padding:20px;
+    
+}
+.card{
+    background-color: ;
+    width:auto;
+    height:auto;
+    border-radius:10px;
+    padding:5px 15px;
+    border:20px;
+}
+@media screen and (max-width:600px) {
+    .container{
+        flex-direction:column;
+    }
+}
+
+
