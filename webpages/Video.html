@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Call</title>
+</head>
+<body>
+    <h1>Video Call</h1>
+    <video id="localVideo" autoplay playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+    <button id="startButton">Start Call</button>
+    <button id="hangupButton" disabled>Hang Up</button>
+
+    <script>
+        const localVideo = document.getElementById('localVideo');
+        const remoteVideo = document.getElementById('remoteVideo');
+        const startButton = document.getElementById('startButton');
+        const hangupButton = document.getElementById('hangupButton');
+        let localStream;
+        let peerConnection;
+
+        startButton.addEventListener('click', startCall);
+        hangupButton.addEventListener('click', hangUp);
+
+        async function startCall() {
+            const constraints = { video: true, audio: true };
+
+            try {
+                localStream = await navigator.mediaDevices.getUserMedia(constraints);
+                localVideo.srcObject = localStream;
+
+                const configuration = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
+                peerConnection = new RTCPeerConnection(configuration);
+                localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+                peerConnection.onicecandidate = handleICECandidate;
+                peerConnection.ontrack = handleTrack;
+
+                // Create and send an offer to the remote peer (not shown in this example).
+            } catch (error) {
+                console.error('Error starting the call:', error);
+            }
+        }
+
+        function handleICECandidate(event) {
+            // Send the ICE candidate to the remote peer (not shown in this example).
+        }
+
+        function handleTrack(event) {
+            remoteVideo.srcObject = event.streams[0];
+        }
+
+        function hangUp() {
+            // Close the peer connection and release resources.
+            peerConnection.close();
+            localStream.getTracks().forEach(track => track.stop());
+            localVideo.srcObject = null;
+            hangupButton.disabled = true;
+        }
+    </script>
+<script src="myscripts.js"> 
+const express = require('express');
+const http = require('http');
+const WebSocket = require('ws');
+
+const app = express();
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
+
+wss.on('connection', (ws) => {
+    // Handle WebSocket messages for signaling between peers (offer, answer, ICE candidates, etc.).
+    ws.on('message', (message) => {
+        // Process and relay the message to the appropriate peer.
+    });
+});
+
+server.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+</script>
+</body>
+</html>
