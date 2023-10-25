@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Wellness Way</title>
-  <link rel="stylesheet" href="as.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="as.css">
 </head>
-<body>  
-    <div class="container">
-    <div class="card">
-      <div class="card-header"><b>Appointment Scheduling</b></div>
-      <div class="card-body">
+<body>
+    <header>
+        <h2 class="logo">Wellness Way</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Video Consult</a>
+            <a href="#" class="home">Appoint Schedule</a>
+            <a href="#">Login / SignUp</a>
+        </nav>
+    </header>
+    <br><br><br><br>
+
+    <div class="page1">
+        <div class="headTxt"><b>Appointment Scheduling</b></div>
+        <div class="form-body">
         <form action="/schedule-appointment" method="post">
-          <legend>
-            <input type="text" name="name" placeholder="First Name">
-          <input type="text" name="name" placeholder="Last Name"></legend><br>
-          <input type="email" name="email" placeholder="Email"></legend><br>
-          <input type="number" name="number" placeholder="Mobile No">
+         <input type="text" name="name" placeholder="First Name"><br>
+         <input type="text" name="name" placeholder="Last Name"><br>
+         <input type="email" name="email" placeholder="Email"><br>
+         <input type="number" name="number" placeholder="Mobile No">
         </form>
-      </div>
-    </div>
-
-
-    <div class="card mt-3">
-      <div class="card-header"></div>
-      <div class="card-body">
+        </div>
         <form>
           <select name="healthcare_provider_id">
             <option value="">Select a healthcare provider</option>
@@ -35,9 +43,13 @@
             <option value="7">Pediatrics</option>
             <option value="8">Urology</option>
           </select>
+          <br>
           <input type="date" name="date" placeholder="Date">
           <input type="time" name="time" placeholder="Time">
           <button type="submit" class="btn btn-primary">Schedule Appointment</button>
         </form>
+        </div>
       </div>
     </div>
+</body>
+</html>
