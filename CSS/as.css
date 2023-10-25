@@ -58,6 +58,10 @@ header{
 
 .headTxt{
     color: #359381;
+    margin-right: 290px;
+    font-size: 40px;
+    text-align: center;
+
 }
 
 .page2{
@@ -68,20 +72,22 @@ input{
     width: 80%;
     height: 50px;
     border-radius: 25px;
-
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0px;
 }
 
 select{
     width: 80%;
     height: 50px;
     border-radius: 25px;
+    padding: 10px;
+    border: 0px;
+    margin-bottom: 10px;
 }
 
 button{
     width: 80%;
     height: 50px;
     border-radius: 25px;
-}
-
-.container{
 }
