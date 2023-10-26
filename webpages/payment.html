@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAYMENT</title>
+    <link rel="stylesheet" href="../css/payment.css">
 </head>
 <body>
+    <div class = "page1">
     <form action="">
-        <h1>Payment form</h1>
+        <center>
+        <h1 class="">Payment form</h1>
+    
+
         <p> REQUIRED FIELDSET FOLLOWED BY *</p>
         <h2>CONTACT INFO</h2>
-        <p>*Name:<input type="text" name="name" required> </p>
+    </center>
+        <p>Name:<input type="text" name="name" required> </p>
         <p>
             GENDER
             <fieldset>
                 <legend>SELECT</legend>
             Male<input type="radio" name="gender" id="male">
+            <br>
             Female<input type="radio" name="gender" id="female">
-            Trans<input type="radio" name="gender" id="trans">
             </fieldset>
         </p>
         <p>
-            <h5>Address:</h5>
-            <textarea name="adress" id="adress" cols="25" rows="5" required></textarea> 
+            Address:<input type="text" name="address" id="address" required> 
         </p>
         <p>
             *Email:<input type="email" name="email" id="email" required> 
@@ -53,5 +58,6 @@
         </p>
         <input type="submit" value="Pay Now" >
     </form>
+</div>
 </body>
 </html>
