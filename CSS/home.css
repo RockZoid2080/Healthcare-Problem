@@ -74,7 +74,11 @@ header{
 .logo{
     font-size: 2em;
     color: #359381;
+<<<<<<< HEAD
     margin-right: 150px;
+=======
+    margin-right: 200px;
+>>>>>>> 383bf0c05350f711ec0adb432c5ae82a13b05ff8
 }
 
 .navigation{
@@ -136,4 +140,9 @@ button{
     width: 80%;
     height: 50px;
     border-radius: 25px;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 383bf0c05350f711ec0adb432c5ae82a13b05ff8
